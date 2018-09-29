@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>City Finder</title>
+    <!--<script type="text/javascript" src="jquery-3.2.1.js"></script>-->
+    <script
+            src="http://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous">
+    </script>
+    <script src="js/scripts.js"></script>
+    <link rel="stylesheet" type="text/css" href="stylesheets.css">
+</head>
+<body>
+    <form>
+        <h2>Enter A Utah City: </h2><input type="text" id="cityField" value=""><br>
+        <div class="weather-suggestion">
+            Suggestion: <span id="txtHint">Empty</span>
+        </div>
+    <input id="weatherButton" type="submit" value="Submit">
+    </form>
+    <p>City</p>
+    <textarea id="displayCity">No City</textarea>
+    <p>Current Weather</p>
+
+        <div id="weather">No weather</div>
+        <!--<div id="weather-img"></div>-->
+
+
+
+    <form action="">
+        <h2>Enter a field to search stack exchange: </h2>
+        <input type="text" id="searchStack" value=""><br>
+        <input id="searchButton" type="submit" value="Submit">
+    </form>
+    <p>Stack Exchange search results</p>
+    <div id="searchResults"></div>
+
+</body>
+</html>
