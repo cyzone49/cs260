@@ -1,0 +1,58 @@
+html{
+    height:100%;
+}
+body{
+    height:100%;
+    width: 100%;
+    background-image: url(https://i.ytimg.com/vi/yZ5fwMBgMdo/maxresdefault.jpg);
+    background-size: cover;
+    font-family:Questrial;
+}
+.title{
+    position: relative;
+    top: 0;
+    background-color: rgba(176, 172, 146, 0.76);
+    width: 100%;
+	font-size: 4rem;
+	font-weight: 700;
+	
+}
+
+.quote{
+    min-height: 500px;
+    background-color: rgba(253,254,255,.75);
+    box-shadow: #333 0px 4px 7px;
+    font-family: Caudex;
+    font-size: xx-large;
+    color: #12385f;
+    font-weight: 600;
+    padding: 2em;
+}
+.button-cont{
+    margin-top: 30px;
+}
+.myButton{
+    float: right;
+    background-color: rgb(43, 53, 44);
+    border: none;
+    font-size: xx-large;
+    color: #fff;
+    margin: 1rem;
+    padding: 0 1rem;
+}
+.myButton:hover {
+    cursor: pointer;
+    box-shadow: #333 0px 4px 7px;
+}
+.main-content{
+    min-height: 800px;
+    position: relative;
+    top: 60px;
+}
+footer{
+    text-align: center;
+    font-size: xx-large;
+    font-weight: 600;
+    position: relative;
+    top: 30px;
+}
