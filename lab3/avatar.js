@@ -6,8 +6,11 @@ function mainCtrl ($scope) {
     $scope.users = [];
     
     $scope.addNew = function (user) {
+        console.log($scope.users)
+        console.log("user namne = " + user.name + "\nuser email = " + user.email)
         
-        if ( user.name === undefined && user.email === undefined ) {
+        if ( (user.name === undefined && user.email === undefined ) || 
+             (user.name === "" && user.email === "" ) ) {
             alert("Cannot add without both Name and Email");
             return;
         } else {
@@ -16,10 +19,11 @@ function mainCtrl ($scope) {
                 email: user.email,
                 avatarUrl: user.url
             })    
+            user.name = "";
+            user.email = "";
+            user.url = "";
         }
-        user.name = "";
-        user.email = "";
-        user.url = "";
+        
     };
 }
 

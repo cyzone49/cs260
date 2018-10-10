@@ -4,13 +4,14 @@
   <!-- include our dependency on angular -->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
 <script src="avatar.js"></script>
+<link rel="stylesheet" href="avatar.css"> 
   <meta charset="utf-8">
   <title>User Avatar Template</title>
 </head>
 <body>
   
-    <div ng-app='app' ng-controller='mainCtrl'> <!-- [1],[2] -->
-        <h1>Create new user</h1>
+    <div ng-app='app' ng-controller='mainCtrl'>
+        <h1 class="AppTitle">Create new user</h1>
 
         <form name='userForm' ng-submit='addNew(userForm)'>
             <input placeholder='Name' ng-model='userForm.name'/>
@@ -30,4 +31,5 @@
         </ul>
     </div>
 </body>
+
 </html>

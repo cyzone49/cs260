@@ -1,3 +1,8 @@
+body {
+  margin:0;
+  padding:0;
+}
+
 .User-list {
   list-style: none;
 }
@@ -17,9 +22,19 @@
   color: red;
 }
 
-.title {
+.AppTitle {
   font-family: Helvetica, sans-serif;
   font-weight: 700;
   color: #fff;
   background: #002e5d;
+  padding: 5px 10px;
+  margin: 0;
+}
+
+form {
+  margin: 20px 10px;
+}
+
+ul {
+  list-style: none;
 }
