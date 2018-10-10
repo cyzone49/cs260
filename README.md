@@ -1,3 +1,3 @@
 # cs260
 
-REPO for CS360 _ F18
+REPO for CS260 _ F18
