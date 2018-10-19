@@ -1,0 +1,36 @@
+body {
+  margin:0;
+  padding:0;
+}
+
+.User-list {
+  list-style: none;
+}
+
+.opArea--Form {
+  display: grid;
+  margin: 30px;
+  grid-template-columns: 50% 25% 25%;
+  grid-gap: 10px;
+  max-width: 700px;
+}
+
+.AppTitle {
+  font-family: Helvetica, sans-serif;
+  font-weight: 700;
+  color: #fff;
+  background: #002e5d;
+  padding: 5px 30px;
+  margin: 0;
+  font-size: 24px;
+}
+
+form {
+  margin: 20px 10px;
+}
+
+ul {
+  list-style: none;
+  font-size: 16px;
+  font-weight: 500;
+}
