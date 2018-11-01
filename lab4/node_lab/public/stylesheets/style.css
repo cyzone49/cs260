@@ -1,8 +1,9 @@
 body {
     padding: 0;
     margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
-
 
 form {
     background: #630a1e;
@@ -13,18 +14,8 @@ form {
     color: #FFFFFF;
 }
 
-h2 {
-    line-height: 20px;
-    letter-spacing: 2px;
-}
-
 .wrapper {
   padding: 0;
-}
-
-.weather-suggestion {
-    margin-top: 40px;
-    background: #979797;
 }
 
 input {
@@ -32,8 +23,18 @@ input {
     width: 15rem;
 }
 
+.weather-suggestion > p {
+    font-family: Georgia;
+    font-size: 18px;
+}
+
+.weather-result {
+    background-color: lightgrey;
+    font-family: Georgia;
+    font-size: 18px;
+}
+
 div {
-    padding: 50px;
     margin: 0;
 }
 

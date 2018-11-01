@@ -13,23 +13,30 @@
 <body>
     <div id="weather-wrapper" class="wrapper">
         <form>
-            <h2>Enter A Utah City: </h2><input type="text" id="cityField" value=""><br>
-            <div class="weather-suggestion">
-                Suggestion: <span id="txtHint">Empty</span>
-            </div>
+            <h3>Enter A Utah City: </h3>
+            <input type="text" id="cityField" value=""><br>
             <input id="weatherButton" class="my_button" type="submit" value="Submit">
         </form>
-        <p>City</p>
-        <textarea id="displayCity">No City</textarea>
-        <p>Current Weather</p>
-    
-        <div id="weather">No weather</div>
-        <!--<div id="weather-img"></div>-->    
+        
+        
+        <div class="weather-suggestion">
+            <p>Suggestion:</p> <span id="txtHint"></span>
+        </div>
+        
+        <div class="weather-result">
+            <p>City:</p>
+            <textarea id="displayCity">No City</textarea>
+            <p>Current Weather</p>
+        
+            <div id="weather">No weather</div>    
+        </div>
+        
     </div>
 
     <div id="dictionary-wrapper" class="wrapper">
         <form>
-            Enter a dictionary search: <input type="text" id="owlform" value=""><br>
+            <h3>Enter a dictionary search: </h3>
+            <input type="text" id="owlform" value=""><br>
             <button id="owlbutton" class="my_button" type="submit">Submit</button>
             </form>
         <span id="owldef"></span>
