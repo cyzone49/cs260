@@ -40,11 +40,5 @@ router.get("/owl", function(req,res,next) {
     request(url).pipe(res);
 });
 
-// var owlbot = "https://zlzlap7j50.execute-api.us-east-1.amazonaws.com/prod";
-// router.get('/owlbot', function(req,res) {
-//   console.log("In owlbot");
-//   request(owlbot).pipe(res);
-//   res.send(owlbot);
-// });
 
 module.exports = router;
