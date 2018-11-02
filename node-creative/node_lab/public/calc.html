@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+    <script
+            src="http://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous">
+    </script>
+    <script src="javscripts/calc.js"></script>
+    <link rel="stylesheet" href="calc.css"> 
+  <meta charset="utf-8">
+  <title>Simple Calculator</title>
+</head>
+<body>
+  
+    <div ng-app='app' ng-controller='mainCtrl'>
+        <h1 class="AppTitle">SIMPLE USD CONVERTER</h1>
+        
+        <div class="opArea">
+            <form class="opArea--Form" name='userForm' ng-submit='convertThis(userForm)'>
+                <input placeholder='Amount In USD' ng-model='userForm.amount'/>
+                
+                <select name="currencyDestination" id="combobox" >
+                    <option value="" disabled selected>Select Conversion Option</option>
+                </select>
+                
+                <button type='submit'>Convert</button>
+            </form>
+        </div>
+    
+        <ul class="User-list">
+            <li ng-repeat="user in users" >
+                <avatar user='user' />
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
