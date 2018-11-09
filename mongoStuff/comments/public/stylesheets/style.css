@@ -1,0 +1,71 @@
+body {
+  /*padding: 50px;*/
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+  display:inline;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.header {
+  background: #002e5d;
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff;
+  padding: 2px 10px;
+}
+
+.operation {
+  padding: 10px;
+  background: #CAD5FA;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.formItem {
+  width: 90%;
+  display: table;
+}
+
+.buttonWrapper {
+  width: 95%;
+}
+
+label {
+  display: table-cell;
+  font-size: 15px;
+  font-weight: 500;
+  color: #002e5d;  
+}
+
+.labelText {
+  width: 80px;
+}
+
+input {
+  display: table-cell;
+  width: 100%;
+  margin-bottom: 5px;  
+}
+
+#userToGrabComments {
+  width: 90%;
+}
+
+button{
+  font-size: 12px;
+  font-weight: 700;
+}
+
+@media (max-width: 640px) {
+  .operation {
+    grid-template-columns:  1fr;
+  }
+  
+  .formsWrap {
+    margin-bottom: 20px;
+  }
+}

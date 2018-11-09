@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Comments!</title>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="javascripts/comments.js"></script>
+  <link rel="stylesheet" href="stylesheets/style.css"> 
+  </head>
+  
+  <body>
+    <div class="header">A SIMPLE COMMENTS DATABASE</div>
+    <div class="operation">
+      <div class="formsWrap">
+        <form id="commentForm" action="">
+          <div class="formItem">
+            <label class="labelText" for="name">Name: </label>
+            <input type="text" id="name" placeholder="Name">  
+          </div>
+          <div class="formItem">
+            <label class="labelText" for="comment">Comment: </label>
+            <input type="text" id="comment" placeholder="Comment"><br>
+          </div>
+        </form>
+        <div class="buttonWrapper">
+          <button id="postComment">Post Comment</button>
+          <button id="getComments">Get Comments</button>
+          <button id="deleteComments">Delete All</button>
+        </div>
+      </div>
+      
+      <div class="formsWrap">
+        <form id="commentForm2" action="">
+          <label class="" for="userToGrabComments">If you want to get all comments of a particular user:</label><br>
+          <input type="text" name="" id="userToGrabComments" placeholder="Enter a particular user"/>
+        </form>  
+        <div class="buttonWrapper">
+          <button id="getCommentsFromUser">
+            Get Comments of that User
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <div id="json"></div>
+    <div id="done"></div>
+    <div id="comments"></div>
+  </body>
+</html>

@@ -41,3 +41,15 @@ https://owlbot.info/api/v1/dictionary/learn?format=json
 [0mGET /stylesheets/style.css [32m200 [0m1.571 ms - 1239[0m
 [0mGET /favicon.ico [33m404 [0m42.633 ms - 1162[0m
 [0mGET /getcity?q=a [32m200 [0m2.437 ms - 2[0m
+[0mGET http://5.188.210.12/echo.php [33m404 [0m33.436 ms - 1162[0m
+[0mGET / [32m200 [0m1.335 ms - 1447[0m
+[0mGET / [32m200 [0m0.700 ms - 1447[0m
+[0mGET / [32m200 [0m1.474 ms - 1447[0m
+[0mGET /favicon.ico [33m404 [0m18.559 ms - 1162[0m
+[0mGET /favicon.ico [33m404 [0m15.218 ms - 1162[0m
+[0mGET / [32m200 [0m0.797 ms - 1447[0m
+[0mGET /favicon.ico [33m404 [0m9.860 ms - 1162[0m
+[0mGET / [36m304 [0m0.870 ms - -[0m
+[0mGET /javascripts/scripts.js [36m304 [0m0.361 ms - -[0m
+[0mGET /stylesheets/style.css [36m304 [0m0.358 ms - -[0m
+[0mGET /favicon.ico [33m404 [0m10.629 ms - 1162[0m
