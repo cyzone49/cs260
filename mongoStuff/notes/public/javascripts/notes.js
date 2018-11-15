@@ -35,22 +35,13 @@ $(document).ready(function() {
       var everything = "<ul>";
       for(var item in data) {
         com = data[item];
+        
         if ( isLate(com.Time) ) {
-          everything += "<li><div class='noteItem isLate'>";
-          everything += "<p><em>This event is LATE! </em></p>";
+          everything += parseJsonItem( com, true );
         } else {
-          everything += "<li><div class='noteItem'>";
+          everything += parseJsonItem( com );
         }
         
-        let curr_time = com.Time.split("T");
-        let date      = formatDate( curr_time[0] );
-        let time      = formatAMPM( curr_time[1] );
-        
-        everything += '<p ><i>Title:</i><strong class="noteTitle" > ' + com.Title + "</strong></p>";
-        everything += '<p class="noteDetails" ><i>at Location:</i><strong> ' + com.Location + "</strong></p>";
-        everything += '<p class="noteDetails" ><i>on Date:</i><strong> ' + date + " -- at " + time + "</strong></p>";
-        everything += '<p class="noteDetails" ><i>Description:</i><strong> ' + com.Description + "</strong></p>";
-        everything += "</div></li>";
       }
         
       everything += "</ul>";
