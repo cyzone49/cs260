@@ -1,0 +1,69 @@
+<!--HTML STRUCTURE FOR NOTES PAGE-->
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Personal Events</title>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="javascripts/notes.js"></script>
+  <link rel="stylesheet" href="stylesheets/style.css"> 
+  </head>
+  
+  <body>
+    <div class="header">A SIMPLE PERSONAL EVENTS DATABASE</div>
+    <div class="operation">
+      <div class="formsWrap">
+        <form id="commentForm" action="">
+          <div class="formItem">
+            <label class="labelText" for="title">Title: </label>
+            <input type="text" id="title" placeholder="Title">  
+          </div>
+          
+          <div class="formItem">
+            <label class="labelText" for="location">Location: </label>
+            <input type="text" id="location" placeholder="Location"><br>
+          </div>
+          
+          <div class="formItem">
+            <label class="labelText" for="time">Date: </label>
+            <!--<input type="time" id="time" placeholder="Date">    -->
+            <input type="datetime-local" id="time" name="time" value="2018-11-16T10:30">
+             <!--min="2018-06-07T00:00" max="2018-06-14T00:00">-->
+          </div>
+          
+          <div class="formItem">
+            <label class="labelText" for="Description">Description: </label>
+            <input type="text" id="description" placeholder="Description"><br>
+          </div>
+          
+        </form>
+        <div class="buttonWrapper">
+          <button id="postNote">Add New Event</button>
+          <button id="getUpcomingNotes">Get Upcoming Events</button>
+          <button id="getNotes">Retrive All Events</button>
+        </div>
+        
+        <div class="buttonWrapper">
+          <button id="getLateNotes">Retrive Late Events</button>
+          <button id="deleteNotes">Delete All Events</button>
+        </div>
+        
+      </div>
+      
+      <!--<div class="formsWrap">-->
+      <!--  <form id="commentForm2" action="">-->
+      <!--    <label class="" for="userToGrabComments">If you want to get all comments of a particular user:</label><br>-->
+      <!--    <input type="text" name="" id="userToGrabComments" placeholder="Enter a particular user"/>-->
+      <!--  </form>  -->
+      <!--  <div class="buttonWrapper">-->
+      <!--    <button id="getCommentsFromUser">-->
+      <!--      Get Comments of that User-->
+      <!--    </button>-->
+      <!--  </div>-->
+      <!--</div>-->
+    </div>
+    
+    <div id="json"></div>
+    <div id="done"></div>
+    <div id="notes"></div>
+  </body>
+</html>
