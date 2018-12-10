@@ -1,0 +1,129 @@
+html {
+    box-sizing: border-box;
+    min-height: 100%
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: Verdana, Georgia, sans-serif;
+    margin: 0;
+    height: 100%;
+}
+h1, h2 {
+    font-family: Calisto MT;
+    font-weight: 700;
+}
+h1 {
+    font-size: 100px;
+}
+h2 {
+    font-size: 40px;
+    margin-top: 0;
+}
+
+a {
+    color: #ffffff;
+    display: inline-block;
+    padding: auto 10px;
+    box-shadow: #8D99AE;
+}
+a:hover {
+    text-decoration: none;
+    color: #8D99AE;
+}
+.content-wrapper {
+    max-width: 1023px;
+    margin: 0 auto;
+    padding: 50px;
+    overflow: hidden;
+}
+button {
+    margin: 0 60px ;
+}
+.col-narrow {
+    width: 30%;
+    float: left;
+}
+.col-wide {
+    width: 70%;
+    float: left;
+    padding-left: 20px;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+
+header, footer {
+    background: #630a1e;
+    color: #ffffff;
+}
+/* header */
+header h1, header h2 {
+    color: #EDF2F4;
+    margin: 0;
+}
+
+#profile-img {
+    border-radius: 50%;
+}
+
+#cats_img {
+    height: 350px;
+    width: auto;
+}
+
+footer {
+    text-align: center;
+}
+
+.contact-info a {
+    padding: 10px;
+    display: inline-block;
+}
+
+.about_me {
+    background: #e4d89a;
+}
+
+.about_me a {
+    color: black;
+}
+nav {
+    text-align: center;
+}
+nav a {
+    display: inline-block;
+    padding: 15px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.experience {
+    background: #EDF2F4;
+}
+
+.description {
+    margin-bottom: 25px;
+}
+.description p:first-of-type {
+    margin-top: 0;
+}
+
+.education {
+    background: #c4e5ff;
+}
+
+.contact {
+    background: #ffbeb4;
+    color: black;
+}
+
+.contact a {
+    color: black;
+    text-decoration: none;
+}
+p + h3 {
+    margin-top: 30px;
+}
