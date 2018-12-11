@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+    
+<head>
+    <title>User Login and Sessions</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+</head>
+        
+<body>
+    <div class="header">SIMPLE AUTHENTATION APPLICATION</div>
+    <div class="form-container main-activity">
+        <p class="form-header">Sign Up</p>
+        <form method="POST" action="/signup">
+            <div class="form-item">
+                <label>Username:</label>
+                <input type="text" id="username" name="username"><br>
+            </div>
+            <div class="form-item">
+                <label>Password:</label>
+                <input type="password" id="password" name="password"><br>
+            </div>
+            <div class="form-item">
+                <label>Email:</label>
+                <input type="email" id="email" name="email"><br>
+            </div>
+            
+            
+            
+            <input class="button"  type="submit" id="register" value="Register">
+        </form>
+    </div>
+    <div class="additionals">
+        <hr>
+        <span id="signupMsg">
+        <%= msg %>
+        </span>
+    </div>
+    
+</body> 
+
+</html>
