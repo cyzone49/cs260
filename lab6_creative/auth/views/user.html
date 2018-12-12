@@ -4,6 +4,7 @@
 <head>
     <title>User Login and Sessions</title>
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
         
 <body >
@@ -24,7 +25,31 @@
             <div class="form-item">
                 <label>Favorite Color:</label>
                 <input type="text" id="color" name="color" ng-model="user.color"><br>   
-            </div>    
+            </div>
+            
+            
+            <h2>Add a new Reminder here: </h2><br>
+            <div class="form-item">
+                <label class="labelText" for="title">Title: </label>
+                <input type="text" id="title" name="noteTitle" placeholder="Title" ng-model="user.title"><br>
+            </div>
+            
+            <div class="form-item">
+                <label class="labelText" for="location">Location: </label>
+                <input type="text" id="location" name="noteLocation" placeholder="Location" ng-model="user.location"><br>
+            </div>
+            
+            <div class="form-item">
+                <label class="labelText" for="time">Date: </label>
+                <input type="datetime-local" id="time" name="noteTime" value="2018-12-11T10:00" ng-model="user.time" ><br>
+            </div>
+            
+            <div class="form-item">
+                <label class="labelText" for="Description">Description: </label>
+                <input type="text" id="description" name="noteDescription" placeholder="Description" ng-model="user.description"><br>
+            </div>
+            
+            
                 
             <input class="button" type="submit" id="save" value="Save">
         </form>

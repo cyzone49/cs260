@@ -6,14 +6,19 @@ function hashPW(pwd){
          digest('base64').toString();
 }
 exports.signup = function(req, res){
+  
   console.log("Begin exports.signup");
   var user = new User({username:req.body.username});
+  
   console.log("after new user exports.signup");
   user.set('hashed_password', hashPW(req.body.password));
+  
   console.log("after hashing user exports.signup");
   user.set('email', req.body.email);
+  
   console.log("after email user exports.signup");
   user.save(function(err) {
+    
     console.log("In exports.signup");
     console.log(err);
     if (err){
@@ -26,6 +31,7 @@ exports.signup = function(req, res){
       res.redirect('/');
     }
   });
+  
 };
 exports.login = function(req, res){
   User.findOne({ username: req.body.username })
@@ -67,19 +73,40 @@ exports.getUserProfile = function(req, res) {
 exports.updateUser = function(req, res){
   User.findOne({ _id: req.session.user })
   .exec(function(err, user) {
+    
+    let new_note = {
+      Title: req.body.noteTitle,
+      Location: req.body.noteLocation,
+      Time : req.body.noteTime,
+      Description: req.body.noteDescription,
+    }
+    
+    console.log(new_note);
+    
+    if ( new_note.Title === '' ) {
+      console.log("\n~~Nothing to add to notes[] ");
+    } else {
+      user.notes.push(new_note);  
+      console.log("DONE PUSHING!!!!");
+    }
+    
     user.set('email', req.body.email);
     user.set('color', req.body.color);
+    // console.log(user.notes);
+    
     user.save(function(err) {
       if (err){
         res.sessor.error = err;
       } else {
         req.session.msg = 'User Updated.';
         req.session.color = req.body.color;
+        req.session.notes = user.notes;
       }
       res.redirect('/user');
     });
   });
 };
+
 exports.deleteUser = function(req, res){
   User.findOne({ _id: req.session.user })
   .exec(function(err, user) {

@@ -7,8 +7,10 @@ var bodyParser = require('body-parser');
 var expressSession = require('express-session');
 var mongoStore = require('connect-mongo')({session: expressSession});
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/auth', { useNewUrlParser: true });
+
+mongoose.connect('mongodb://localhost/authNotes01', { useNewUrlParser: true });
 require('./models/users_model.js');
+
 var db = mongoose.connection; //Saves the connection as a variable to use
 db.on('error', console.error.bind(console, 'connection error:')); //Checks for connection errors
 db.once('open', function() { //Lets us know when we're connected

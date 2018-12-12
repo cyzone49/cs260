@@ -76,3 +76,34 @@ hr {
 }
 
 
+
+
+/* NOTES SECTION */
+
+.notesSection {
+  margin-top: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.noteItem {
+  margin: 0;
+  padding: 10px 25px;
+}
+
+.noteTitle {
+  font-size: 15px;
+}
+
+.noteDetails {
+  padding-left: 25px;
+}
+
+.isLate {
+  background: #63100b;
+  color: #fff;
+  
+}
