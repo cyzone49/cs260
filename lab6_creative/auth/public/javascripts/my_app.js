@@ -30,7 +30,22 @@ $(document).ready(function() {
   var tzoffset = (new Date()).getTimezoneOffset() * 60000; //offset in milliseconds
   var localISOTime = (new Date(Date.now() - tzoffset)).toISOString().slice(0, -5);
   
-  $('#time').val(localISOTime);
+  // $('#time').val(localISOTime);
+  
+  $("#openSectionAddNotes").click(function() {
+    
+   if( $('#section-addNotes').css('display') === 'none' ){
+     console.log("showing");
+     $('#section-addNotes').show();
+     $("#openSectionAddNotes").html('No need to add new Event?');
+     
+   } else {
+     console.log("hiding");
+     $('#section-addNotes').hide();
+     $("#openSectionAddNotes").html('Need a new Event?');
+   }
+    
+  });
   
   $("#getNotes").click(function() {
     console.log("getNotes clicked!");
@@ -38,13 +53,11 @@ $(document).ready(function() {
     var everything = "<ul>";
     for(var item in out_notes) {
       com = out_notes[item];
-      console.log("\n\nIndividual notes item:");
-      console.log(com);
+      
       if ( com.Title === '' ) {
         console.log("Invalid note data");
         continue;
       }
-      
       if ( isLate(com.Time) ) {
         everything += parseJsonItem( com, true );
       } else {
@@ -54,25 +67,67 @@ $(document).ready(function() {
       
     everything += "</ul>";
     $("#notes").html(everything);
+    $("#notes").css('display','block');
     
+  });
+  
+  $("#getUpcomingNotes").click(function() {
+    console.log("getUpcomingNotes clicked!");
+    
+    var everything = "<ul>";
+    for(var item in out_notes) {
+      com = out_notes[item];
+      if ( com.Title === '' ) {
+        console.log("Invalid note data");
+        continue;
+      }
+      if ( isLate( com.Time ) === false ) {
+        everything += parseJsonItem( com );
+      }
+    }
+      
+    everything += "</ul>";
+    $("#notes").html(everything);
+    $("#notes").css('display','block');
+    
+  });
+  
+  $("#getLateNotes").click(function() {
+    
+    console.log("getUpcomingNotes clicked!");
+    var everything = "<ul>";
+    for(var item in out_notes) {
+      com = out_notes[item];
+      if ( com.Title === '' ) {
+        console.log("Invalid note data");
+        continue;
+      }
+      if ( isLate( com.Time ) ) {
+        everything += parseJsonItem( com, true );
+      }
+    }
+      
+    everything += "</ul>";
+    $("#notes").html(everything);
+    $("#notes").css('display','block');
   });
   
   function parseJsonItem( com, isLate=false ) {
     let everything = "";
     if ( isLate ) {
       everything += "<li><div class='noteItem isLate'>";
-      everything += "<p><em>This event is LATE! </em></p>";
+      everything += "<p><em>This event has <strong>PASSED</strong> ! </em></p>";
     } else {
       everything += "<li><div class='noteItem'>";
     }
     
-    console.log(com.Time);
+    // console.log(com.Time);
     
     let curr_time = com.Time.split("T");
     let date      = formatDate( curr_time[0] );
     let time      = formatAMPM( curr_time[1] );
     
-    everything += '<p ><i>Title:</i><strong class="noteTitle" > ' + com.Title + "</strong></p>";
+    everything += '<p style="text-decoration: underline overline;"><i>Title:</i><strong class="noteTitle" > ' + com.Title + "</strong></p>";
     everything += '<p class="noteDetails" ><i>at Location:</i><strong> ' + com.Location + "</strong></p>";
     everything += '<p class="noteDetails" ><i>on Date:</i><strong> ' + date + " -- at " + time + "</strong></p>";
     everything += '<p class="noteDetails" ><i>Description:</i><strong> ' + com.Description + "</strong></p>";

@@ -9,15 +9,16 @@ a {
   display: block;
   font-size: 16px;
   padding-bottom: 5px;
+  max-width: 160px;
 }
-
 
 .header {
   background: #002e5d;
   font-weight: 700;
   font-size: 18px;
   color: #fff;
-  padding: 2px 10px;
+  padding: 8px 20px;
+  font-family: Verdana;
 }
 
 form {
@@ -36,12 +37,12 @@ label {
 
 input {
   display: table-cell;
-  width: 60%;
+  width: 40%;
   margin-bottom: 5px;
 }
 
 .main-activity, .additionals, .header {
-  padding-left: 10px;
+  padding-left: 20px;
 }
 
 
@@ -91,7 +92,15 @@ ul {
 }
 .noteItem {
   margin: 0;
-  padding: 10px 25px;
+  padding: 20px 25px;
+  max-width: 55rem;
+}
+
+.noteItem:hover{
+  border: .5px #4e4f54 solid;
+  /*padding: 10px;*/
+  box-shadow: 5px 10px #888888;
+  
 }
 
 .noteTitle {
@@ -103,7 +112,25 @@ ul {
 }
 
 .isLate {
-  background: #63100b;
-  color: #fff;
+  /*background: #63100b;*/
+  color: red;
   
+}
+
+.notes-button {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+/* notes -- user.html */
+
+#openSectionAddNotes{
+  margin: 20px 0;
+  display: block;
+}
+
+#section-addNotes {
+  margin-bottom: 20px;
+  display: none;
 }

@@ -46,7 +46,7 @@ exports.login = function(req, res){
         req.session.user = user.id;
         req.session.username = user.username;
         req.session.msg = 'Authenticated as ' + user.username;
-        req.session.color = user.color;
+        req.session.age = user.age;
         res.redirect('/');
       });
     }else{
@@ -91,7 +91,7 @@ exports.updateUser = function(req, res){
     }
     
     user.set('email', req.body.email);
-    user.set('color', req.body.color);
+    user.set('age', req.body.age);
     // console.log(user.notes);
     
     user.save(function(err) {
@@ -99,7 +99,7 @@ exports.updateUser = function(req, res){
         res.sessor.error = err;
       } else {
         req.session.msg = 'User Updated.';
-        req.session.color = req.body.color;
+        req.session.age = req.body.age;
         req.session.notes = user.notes;
       }
       res.redirect('/user');

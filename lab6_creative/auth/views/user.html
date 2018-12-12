@@ -8,7 +8,7 @@
 </head>
         
 <body >
-    <div class="header">SIMPLE AUTHENTATION APPLICATION</div>
+    <div class="header">A SIMPLE PERSONAL EVENTS DATABASE</div>
     <div class="form-container main-activity" ng-controller="myController">
         <p id="sectionTitle" class="form-header">User Profile</p>
         <form method="POST" action="/user/update">
@@ -23,41 +23,48 @@
             </div>
             
             <div class="form-item">
-                <label>Favorite Color:</label>
-                <input type="text" id="color" name="color" ng-model="user.color"><br>   
+                <label>Age:</label>
+                <input type="text" id="age" name="age" ng-model="user.age"><br>   
             </div>
             
+            <div id="section-addNotes">
+                <h2>Add a new Event here: </h2><br>
+                <div class="form-item">
+                    <label class="labelText" for="title">Title: </label>
+                    <input type="text" id="title" name="noteTitle" placeholder="Title" ng-model="user.title"><br>
+                </div>
             
-            <h2>Add a new Reminder here: </h2><br>
-            <div class="form-item">
-                <label class="labelText" for="title">Title: </label>
-                <input type="text" id="title" name="noteTitle" placeholder="Title" ng-model="user.title"><br>
+                <div class="form-item">
+                    <label class="labelText" for="location">Location: </label>
+                    <input type="text" id="location" name="noteLocation" placeholder="Location" ng-model="user.location"><br>
+                </div>
+            
+                <div class="form-item">
+                    <label class="labelText" for="time">Date: </label>
+                    <input type="datetime-local" id="time" name="noteTime" ng-model="user.time" ><br>
+                </div>
+            
+                <div class="form-item">
+                    <label class="labelText" for="Description">Description: </label>
+                    <input type="text" id="description" name="noteDescription" placeholder="Description" ng-model="user.description"><br>
+                </div>    
             </div>
-            
-            <div class="form-item">
-                <label class="labelText" for="location">Location: </label>
-                <input type="text" id="location" name="noteLocation" placeholder="Location" ng-model="user.location"><br>
-            </div>
-            
-            <div class="form-item">
-                <label class="labelText" for="time">Date: </label>
-                <input type="datetime-local" id="time" name="noteTime" value="2018-12-11T10:00" ng-model="user.time" ><br>
-            </div>
-            
-            <div class="form-item">
-                <label class="labelText" for="Description">Description: </label>
-                <input type="text" id="description" name="noteDescription" placeholder="Description" ng-model="user.description"><br>
-            </div>
-            
-            
+            <br>
                 
             <input class="button" type="submit" id="save" value="Save">
         </form>
+    
     </div>
+    <hr>
+    
+    <div class="additionals">
+        <button class="button" id="openSectionAddNotes">Need a new Event?</button>
+    </div>
+    <hr>
     
     <div class="additionals">
         <form method="POST" action="/user/delete">
-            <input class="button" type="submit" id="delete" value="Delete User">
+            <input class="button" type="submit" id="delete" value="Delete User" >
         </form>
     </div>
     <hr>

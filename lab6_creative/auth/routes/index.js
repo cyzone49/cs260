@@ -6,24 +6,24 @@ var users = require('../controllers/users_controller');
 console.log("before / Route");
 router.get('/', function(req, res){
     console.log("\n[ index.js ] / Route");
-    console.log("~~printing session:");
-    console.log(req.session);
+    // console.log("~~printing session:");
+    // console.log(req.session);
     
     if (req.session.user) {
-      console.log("/ Route if user");
-      console.log(("\nPrinting user:"));
-      console.log(req.session.user);
+      // console.log("/ Route if user");
+      // console.log(("\nPrinting user:"));
+      // console.log(req.session.user);
       
       let curr_notes = req.session.notes;
+      
       console.log("\n\nPrinting notes:");
       console.log(curr_notes)
+      
       if ( curr_notes === undefined ) {
-        console.log("~~~ ~~~ Nothing in notes yet!")
+        console.log("~~~ Nothing in notes yet! ~~~")
       } else {
         if ( curr_notes.length != 0 ) {
-          console.log("got here");
-          // console.log(typeof(curr_notes));
-          // console.log((curr_notes[0]));
+          console.log("~~~ Printing note titles: ~~~");
           curr_notes.forEach( function( note ) {
             console.log("\ttitle: " + note.Title + " .... ");
           } );
@@ -32,7 +32,7 @@ router.get('/', function(req, res){
       
       res.render('index', { username: req.session.username,
                             msg:      req.session.msg,
-                            color:    req.session.color,
+                            age:      req.session.age,
                             notes:    req.session.notes
                           });
     } else {

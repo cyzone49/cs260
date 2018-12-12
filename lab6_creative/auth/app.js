@@ -8,7 +8,7 @@ var expressSession = require('express-session');
 var mongoStore = require('connect-mongo')({session: expressSession});
 var mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/authNotes01', { useNewUrlParser: true });
+mongoose.connect('mongodb://localhost/authNotes02', { useNewUrlParser: true });
 require('./models/users_model.js');
 
 var db = mongoose.connection; //Saves the connection as a variable to use

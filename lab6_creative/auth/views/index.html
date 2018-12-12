@@ -13,7 +13,7 @@
         <h2 id="welcomeText">Welcome <span class="usrNAME"><%= username %></span>!
         </h2>
         <a id="logoutLink" href="/logout">logout</a>
-        <a id="editLink" href="/user">Edit User</a>
+        <a id="editLink" href="/user">Edit User / Add Event</a>
     </div>
     <hr>
     
@@ -22,22 +22,24 @@
             <%= msg %>
         </span>
     </div>
-    <hr>
     
     <div class="additionals">
         <span id="colorText">
-        Color: 
-            <%= color %>
+        Age: 
+            <%= age %>
         
         </span>
     </div>
     
+    <hr>
+    
     <div class="additionals notesSection">
-        <button id="getNotes">Retrive All Events</button>
+        <button id="getNotes" class="notes-button">All Events</button>
+        <button id="getUpcomingNotes" class="notes-button">Upcoming Events</button>
+        <button id="getLateNotes" class="notes-button">Passed Events</button>
         <div id="notes"></div>
     </div>
     
-    <!--<div id="notes"></div>-->
     <script src="http://code.angularjs.org/1.2.9/angular.min.js"></script>
     <script src="/javascripts/my_app.js"></script>
 </body>
